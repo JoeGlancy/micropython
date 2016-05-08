@@ -42,7 +42,7 @@ volatile bool accelerometer_updating = false;
 #define GESTURE_LIST_SIZE (8)
 
 // We store this state globally instead of in a microbit_accelerometer_obj_t
-// struct so that that whole struct does not need to go in RAM.
+// struct so that the whole struct does not need to go in RAM.
 volatile uint16_t gesture_state = 0;                    // 1 bit per gesture
 volatile uint8_t gesture_list_cur = 0;                  // index into gesture_list
 volatile uint8_t gesture_list[GESTURE_LIST_SIZE] = {0}; // list of pending gestures, 4-bits per element
