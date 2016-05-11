@@ -174,7 +174,7 @@ MP_DEFINE_CONST_FUN_OBJ_1(microbit_button_get_events_obj, microbit_button_get_ev
 void button_event_listener(MicroBitEvent *evt, microbit_button_obj_t *button_obj) {
     if (evt->value >= MICROBIT_BUTTON_EVT_DOWN && evt->value <= MICROBIT_BUTTON_EVT_DOUBLE_CLICK) {
         button_obj->last_event = evt->value;
-        printf("[button event] %d\r\n", (int) evt->value);
+        //printf("[button event] %d\r\n", (int) evt->value);
         if (evt->value == MICROBIT_BUTTON_EVT_DOWN) {
             button_obj->downStartTime = ticks;
             button_obj->pressed = (button_obj->pressed + 2) | 1;
