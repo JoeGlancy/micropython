@@ -36,6 +36,12 @@ Classes
         Returns ``True`` if the specified button ``button`` is pressed, and
         ``False`` otherwise.
 
+    .. py:method:: is_long_pressed()
+
+        Returns ``True`` if the specified button ``button`` is long pressed (ie:
+        is being held down for an extended period of time), and ``False``
+        otherwise.
+
     .. py:method:: was_pressed()
 
         Returns ``True`` or ``False`` to indicate if the button was pressed
@@ -45,6 +51,25 @@ Classes
 
         Returns the running total of button presses, and resets this total
         to zero before returning.
+
+    .. py:method:: was_clicked()
+
+        Returns ``True`` or ``False`` to indicate if the button was clicked
+        since the device started or the last time this method was called.
+
+    .. py:method:: was_double_clicked()
+
+        Returns ``True`` or ``False`` to indicate if the button was double
+        clicked (two clicks in quick succession) since the device started or the
+        last time this method was called.
+
+    .. py:method:: was_long_clicked()
+
+        Returns ``True`` or ``False`` to indicate if the button was long clicked
+        (ie: clicked, but held down in between for an extended preiod of time)
+        since the device started or the last time this method was called.
+
+
 
 Example
 =======

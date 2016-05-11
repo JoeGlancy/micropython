@@ -227,4 +227,13 @@ extern const mp_obj_module_t love_module;
 extern const mp_obj_module_t antigravity_module;
 extern const mp_obj_module_t this_module;
 
+// various defines to enable/disable certain button functions
+// NOTE: this has no effect on whether or not the function name strings are
+// built into the final image.
+#define MICROBIT_BUTTON_INCLUDE_IS_LONG_PRESSED         1
+#define MICROBIT_BUTTON_INCLUDE_WAS_CLICKED             1
+#define MICROBIT_BUTTON_INCLUDE_WAS_DOUBLE_CLICKED      1
+#define MICROBIT_BUTTON_INCLUDE_WAS_LONG_CLICKED        1
+#define MICROBIT_BUTTON_INCLUDE_WAS_HOLD                1
+
 #endif // __MICROPY_INCLUDED_MICROBIT_MODMICROBIT_H__
