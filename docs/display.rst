@@ -47,6 +47,12 @@ Functions
     Note that the ``wait``, ``loop`` and ``clear`` arguments must be specified
     using their keyword.
 
+.. note::
+
+    If using a generator as the ``iterable``, then take care not to allocate any memory
+    in the generator as allocating memory in an interrupt is prohibited and will raise a
+    ``MemoryError``.
+
 .. py:function:: scroll(string, delay=150, \*, wait=True, loop=False, monospace=False)
 
     Similar to ``show``, but scrolls the ``string`` horizontally instead. The
@@ -63,6 +69,19 @@ Functions
 
     Note that the ``wait``, ``loop`` and ``monospace`` arguments must be specified
     using their keyword.
+
+.. py:function:: on()
+
+    Use on() to turn on the display.
+
+.. py:function:: off()
+
+    Use off() to turn off the display (thus allowing you to re-use the GPIO
+    pins associated with the display for other purposes).
+
+.. py:function:: is_on()
+
+    Returns ``True`` if the display is on, otherwise returns ``False``.
 
 Example
 =======
